@@ -1,34 +1,32 @@
-/* Theme root variables */
 :root {
   --border-radius: 5px;
 }
 
 :root,
 [data-selected-theme="mint"] {
-  --bg-color: #A7F3D0;    /* Light Mint Green */
-  --text-color: #054A29;  /* Dark Forest Green */
-  --accent-color: #04B67D; /* Bright Emerald Green */
+  --bg-color: #A7F3D0;    
+  --text-color: #054A29;  
+  --accent-color: #04B67D; 
 }
 
 [data-selected-theme="sky"] {
-  --bg-color: #B3E5FC;    /* Soft Sky Blue */
-  --text-color: #0A3D91;  /* Deep Navy Blue */
-  --accent-color: #2196F3; /* Vivid Azure Blue */
+  --bg-color: #B3E5FC;  
+  --text-color: #0A3D91; 
+  --accent-color: #2196F3;
 }
 
 [data-selected-theme="peach"] {
-  --bg-color: #FAD4D8;    /* Pastel Peach Pink */
-  --text-color: #7B113A;  /* Dark Maroon */
-  --accent-color: #FF4E50; /* Bright Rose Red */
+  --bg-color: #FAD4D8;
+  --text-color: #7B113A;
+  --accent-color: #FF4E50;
 }
 
 [data-selected-theme="coral"] {
-  --bg-color: #FFD9B3;    /* Light Peach Orange */
-  --text-color: #7F3300;  /* Deep Burnt Orange */
-  --accent-color: #FF7043; /* Vibrant Coral Orange */
+  --bg-color: #FFD9B3;
+  --text-color: #7F3300;
+  --accent-color: #FF7043;
 }
 
-/* Reset and base styles */
 * {
   padding: 0;
   margin: 0;
@@ -46,7 +44,6 @@ body {
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-/* Theme Container Styling */
 .theme-container {
   text-align: center;
   padding: 2rem;
@@ -61,7 +58,6 @@ body {
   color: var(--text-color);
 }
 
-/* Theme Options Button Styling */
 .theme-options {
   display: flex;
   justify-content: center;

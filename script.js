@@ -1,4 +1,3 @@
-// Set a default theme and handle theme application
 const DEFAULT_THEME = 'green';
 
 function applyTheme(theme) {
@@ -22,7 +21,6 @@ function loadInitialTheme() {
   applyTheme(savedTheme);
 }
 
-// Event listener to handle theme change and save selection
 function setupEventListeners() {
   document.querySelector('.theme-options').addEventListener('click', event => {
     const theme = event.target.getAttribute('data-theme');
@@ -33,7 +31,6 @@ function setupEventListeners() {
   });
 }
 
-// Initialize theme and event listeners on page load
 document.addEventListener('DOMContentLoaded', () => {
   loadInitialTheme();
   setupEventListeners();
