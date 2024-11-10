@@ -1,0 +1,99 @@
+/* Theme root variables */
+:root {
+  --border-radius: 5px;
+}
+
+:root,
+[data-selected-theme="mint"] {
+  --bg-color: #A7F3D0;    /* Light Mint Green */
+  --text-color: #054A29;  /* Dark Forest Green */
+  --accent-color: #04B67D; /* Bright Emerald Green */
+}
+
+[data-selected-theme="sky"] {
+  --bg-color: #B3E5FC;    /* Soft Sky Blue */
+  --text-color: #0A3D91;  /* Deep Navy Blue */
+  --accent-color: #2196F3; /* Vivid Azure Blue */
+}
+
+[data-selected-theme="peach"] {
+  --bg-color: #FAD4D8;    /* Pastel Peach Pink */
+  --text-color: #7B113A;  /* Dark Maroon */
+  --accent-color: #FF4E50; /* Bright Rose Red */
+}
+
+[data-selected-theme="coral"] {
+  --bg-color: #FFD9B3;    /* Light Peach Orange */
+  --text-color: #7F3300;  /* Deep Burnt Orange */
+  --accent-color: #FF7043; /* Vibrant Coral Orange */
+}
+
+/* Reset and base styles */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: radial-gradient(var(--bg-color), var(--accent-color));
+  color: var(--text-color);
+  font-family: Arial, sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Theme Container Styling */
+.theme-container {
+  text-align: center;
+  padding: 2rem;
+  background-color: rgba(255, 255, 255, 0.6);
+  border: 2px solid var(--text-color);
+  border-radius: var(--border-radius);
+  max-width: 90%;
+}
+
+.theme-container header h1 {
+  font-size: 2.2rem;
+  color: var(--text-color);
+}
+
+/* Theme Options Button Styling */
+.theme-options {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-top: 1.5rem;
+}
+
+.theme-button {
+  background: none;
+  padding: 0.8rem 1.5rem;
+  border: 2px solid var(--text-color);
+  color: var(--text-color);
+  font-size: 1rem;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.theme-button[aria-pressed="true"] {
+  background-color: var(--text-color);
+  color: var(--bg-color);
+}
+
+.theme-button:hover, .theme-button:focus {
+  outline: 2px solid var(--accent-color);
+}
+
+.theme-button[aria-pressed="true"]:hover, .theme-button[aria-pressed="true"]:focus {
+  outline: 2px solid var(--bg-color);
+}
+
+footer p a {
+  color: var(--accent-color);
+  text-decoration: none;
+}
